@@ -19,7 +19,7 @@ const ProductCards = () => {
       return;
     }
     console.log(uuidv4());
-    fetch(`http://localhost:5001/user/collection1/644ecffe38fa62672d349ebd`, {
+    fetch(`https://fingertipps.store/user/collection1/644ecffe38fa62672d349ebd`, {
       method: "post",
       headers: {
         "content-Type": "application/json",

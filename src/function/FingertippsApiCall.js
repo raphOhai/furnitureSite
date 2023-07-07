@@ -10,7 +10,7 @@ const quest = JSON.parse(localStorage.getItem("quest"));
 export const addToCart = (item) => {
   const store = "644ecffe38fa62672d349ebd";
   const quest = JSON.parse(localStorage.getItem("quest"));
-  fetch("https://www.fingertipps.store/addtocart", {
+  fetch("https://fingertipps.store/addtocart", {
     method: "post",
     headers: {
       "Content-Type": "application/json",
@@ -48,7 +48,7 @@ export const getCartItems = (items, dispatch) => {
   }
   const store = "644ecffe38fa62672d349ebd";
   const quest = JSON.parse(localStorage.getItem("quest"));
-  fetch("https://www.fingertipps.store/getcart", {
+  fetch("https://fingertipps.store/getcart", {
     method: "post",
     headers: {
       "Content-Type": "application/json",
@@ -76,7 +76,7 @@ export const scrollToTop = () => {
 
 export const increaseItemCount = (item, dispatch) => {
   dispatch(inscreaseItemCount(item));
-  fetch("https://www.fingertipps.store/increase", {
+  fetch("https://fingertipps.store/increase", {
     method: "post",
     headers: {
       "Content-Type": "application/json",
@@ -105,7 +105,7 @@ export const increaseItemCount = (item, dispatch) => {
 
 export const decreaseItemCount = (item, dispatch) => {
   dispatch(decreaseItemCountInCart(item));
-  fetch("https://www.fingertipps.store/decrease", {
+  fetch("https://fingertipps.store/decrease", {
     method: "post",
     headers: {
       "Content-Type": "application/json",
@@ -132,7 +132,7 @@ export const decreaseItemCount = (item, dispatch) => {
 
 export const deleteSingleCartItem = (item, dispatch) => {
   dispatch(deleteItemIncart(item));
-  fetch("https://www.fingertipps.store/deleteCart", {
+  fetch("https://fingertipps.store/deleteCart", {
     method: "post",
     headers: {
       "Content-Type": "application/json",
@@ -166,7 +166,7 @@ export const submit = (reference, total, address, name, email, itemsInCart) => {
   const phoneNumber = 909876545;
   // dispatch(closeModal());
   const reviews = reference.reference;
-  fetch("https://www.fingertipps.store/conversations", {
+  fetch("https://fingertipps.store/conversations", {
     method: "post",
     headers: {
       "Content-Type": "application/json",
@@ -203,7 +203,7 @@ const saveOrder = (
   total,
   itemsInCart
 ) => {
-  fetch("https://www.fingertipps.store/messages", {
+  fetch("https://fingertipps.store/messages", {
     method: "post",
     headers: {
       "Content-Type": "application/json",
@@ -229,7 +229,7 @@ const saveOrder = (
 };
 
 export const clear = () => {
-  fetch("https://www.fingertipps.store/clear", {
+  fetch("https://fingertipps.store/clear", {
     method: "post",
     headers: {
       "Content-Type": "application/json",
@@ -247,7 +247,7 @@ export const clear = () => {
 };
 
 export const Search = (searchQuery, ResolveAction) => {
-  fetch("https://www.fingertipps.store/search", {
+  fetch("https://fingertipps.store/search", {
     method: "post",
     headers: {
       "content-Type": "application/json",

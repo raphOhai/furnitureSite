@@ -18,7 +18,6 @@ const Section1 = () => {
                 Donec mattis porta eros, aliquet finibus risus interdum at.
                 Nulla vivethe as it was for us to know what was to be done.
               </p>
-
               <Btn />
             </div>
           </div>
