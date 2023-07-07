@@ -10,8 +10,8 @@ const Header = () => {
   const history = useHistory();
   return (
     <>
-      <div id="top" className="fixed">
-        <div className="header padding backGround">
+      <div id="top" className="fixed  maxWidt">
+        <div className="header padding backGround ">
           <div
             onClick={() => scrollToTop() & history.push("/")}
             className="flex center"

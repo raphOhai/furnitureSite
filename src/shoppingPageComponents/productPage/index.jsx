@@ -8,15 +8,17 @@ import AlertMessage from "../alertMessage";
 const Product = () => {
   return (
     <>
-      <div className="stack gap4">
+      <div className="stack gap4 ">
         <AlertMessage />
         <Header />
 
-        <div className="">
+        <div className="maxWidth">
           <SearchBar />
         </div>
-        <ProductCards />
-        <Footer />
+        <div className="maxWidth">
+          <ProductCards />
+          <Footer />
+        </div>
       </div>
     </>
   );

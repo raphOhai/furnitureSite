@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div
       style={{ backgroundColor: "white", paddingTop: "5rem" }}
-      className="padding"
+      className="padding  maxWidth"
     >
       <div className="stack gap4">
         <div className="grid3">

@@ -6,7 +6,7 @@ const Hero = () => {
   AnimateOnScroll("Eeeeee");
   AnimateOnScroll("Eeee");
   return (
-    <div className=" overFLowHiden">
+    <div className=" overFLowHiden bacGroun">
       <div></div>
       <div className="flex center heroDiv  overFLowHiden">
         <div className="relative">

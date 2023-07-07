@@ -7,7 +7,7 @@ import AlertMessage from "../alertMessage";
 
 const SearchPage = () => {
   return (
-    <div>
+    <div className="maxWidth">
       <AlertMessage />
       <div className="stack gap4">
         <Header />

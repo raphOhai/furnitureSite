@@ -38,7 +38,7 @@ const Cartitems = () => {
   };
 
   return (
-    <div className="grid5 gap2 padding">
+    <div className="grid5 gap2 padding  maxWidth">
       <div className="flex start ">
         <div className="stack gap4">
           {itemsInCart

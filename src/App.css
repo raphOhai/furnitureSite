@@ -332,7 +332,6 @@ input:focus {
   max-width: 40rem;
 }
 
-
 .pointer {
   cursor: pointer;
 }
@@ -385,3 +384,14 @@ input:focus {
 .transition2 {
   transition: all 3s;
 }
+
+.bacGround {
+  background-color: #e1e2e7;
+}
+
+.maxWidth {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0rem;
+}
+

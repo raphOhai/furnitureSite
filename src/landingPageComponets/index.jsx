@@ -9,13 +9,15 @@ const LandingPageComponents = () => {
   return (
     <div className="stack gapX">
       <Header />
-      <div className="mainContentColo stack gapX">
+      <div className="mainContentColo stack gapX maxWidth">
         <Hero />
         <Section1 />
         <Section2 />
         <Section3 />
       </div>
-      <Footer />
+      <div className="maxWidth">
+        <Footer />
+      </div>
     </div>
   );
 };
