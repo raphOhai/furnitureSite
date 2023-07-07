@@ -7,11 +7,12 @@ import Cart from "./shoppingPageComponents/cartPage/cart/Cart";
 import AlertMessage from "./shoppingPageComponents/alertMessage";
 import SearchResultCards from "./shoppingPageComponents/searchResultPage/searchResultCards";
 import SearchPage from "./shoppingPageComponents/searchResultPage";
+import Loader from "./loaderComponents";
 
 function App() {
   return (
     <>
-      <AlertMessage />
+      <Loader />
       <Router>
         <Switch>
           <Route exact path="/">

@@ -3,7 +3,7 @@
   opacity: 0;
   /* filter: blur(2px); */
   transform: translateX(-15%);
-  transition: all 4s;
+  transition: all 1s;
 }
 
 .sideSlide1 {
