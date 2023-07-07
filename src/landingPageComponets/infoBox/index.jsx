@@ -22,7 +22,7 @@ const InfoBox = ({ name, price, discript, id }) => {
               <div className=""></div>
               <button
                 onClick={() => scrollToTop() & history.push("/products")}
-                className="ctaBtn"
+                className="ctaBtn pointer"
               >
                 <p className="ctaBtnText">Shop now</p>
               </button>
