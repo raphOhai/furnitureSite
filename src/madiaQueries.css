@@ -1,0 +1,543 @@
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.cartItemGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.searchBarGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.cartImage {
+  max-width: 10rem;
+}
+@media only screen and (max-width: 280px) {
+  .infoBoxContent2 {
+    display: none;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .hideMobileAndTab {
+    display: none;
+  }
+  .mainGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+  }
+  .padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .heroDiv {
+    background-image: url(../public/heroImg6.jpg);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 50rem;
+
+    background-position-y: -1rem;
+    background-position-x: -10rem;
+    background-size: 300%;
+  }
+  .infoBoxContent1 {
+    position: absolute;
+    top: -4rem;
+    left: -2rem;
+  }
+  .infoBoxContent2 {
+    position: absolute;
+    top: 13rem;
+    left: -2rem;
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8rem;
+  }
+
+  .flexBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+  .trickImage1 {
+    position: absolute;
+    top: 15rem;
+    left: 7rem;
+  }
+  .trickImage2 {
+    position: absolute;
+    top: 2rem;
+    left: 15rem;
+  }
+  .grid3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10rem;
+  }
+  .grid4 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+  .shiftTop2 {
+    margin-top: 10rem;
+  }
+  .productGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .grid5 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .alert {
+    position: fixed;
+    top: 0rem;
+    right: 1rem;
+
+    padding: 1.5rem;
+    z-index: 30;
+  }
+
+  .alertBox {
+    background-color: #20315c;
+    border-radius: 13px;
+    padding: 1rem;
+    width: 100%;
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .alertText {
+    color: #fff;
+    font-family: book;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .hideMobileAndTab {
+    display: none;
+  }
+  .mainGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+  }
+  .padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .heroDiv {
+    background-image: url(../public/heroImg6.jpg);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: auto;
+    padding: 20rem;
+    background-position-y: -1rem;
+    background-position-x: -1rem;
+    background-size: 100%;
+  }
+  .infoBoxContent1 {
+    position: absolute;
+    top: 10rem;
+    left: -4rem;
+  }
+  .infoBoxContent2 {
+    position: absolute;
+    top: 13rem;
+    left: -2rem;
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8rem;
+  }
+
+  .flexBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+  .trickImage1 {
+    position: absolute;
+    top: 15rem;
+    left: 20rem;
+  }
+  .trickImage2 {
+    position: absolute;
+    top: 0rem;
+    left: 26rem;
+  }
+  .grid3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+  .grid4 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  }
+  .shiftTop2 {
+    margin-top: 10rem;
+  }
+  .productGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .grid5 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .alert {
+    position: fixed;
+    top: 0rem;
+    right: 1rem;
+
+    padding: 1.5rem;
+    z-index: 30;
+  }
+
+  .alertBox {
+    background-color: #20315c;
+    border-radius: 13px;
+    padding: 1rem;
+    width: 100%;
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .alertText {
+    color: #fff;
+    font-family: book;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .hideMobileAndTab {
+    display: none;
+  }
+  .mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .padding {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .heroDiv {
+    background-image: url(../public/heroImg6.jpg);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: initial;
+    background-position: center top;
+    width: 100%;
+    height: 60vh;
+    z-index: -3;
+    background-position-y: -9rem;
+    /* opacity: 0.5; */
+    background-position-x: -16rem;
+  }
+  .infoBoxContent1 {
+    position: absolute;
+    top: -3rem;
+    left: -10rem;
+  }
+  .infoBoxContent2 {
+    position: absolute;
+    top: 20rem;
+    left: -25rem;
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8rem;
+  }
+
+  .flexBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 4rem;
+  }
+  .trickImage1 {
+    position: absolute;
+    top: 15rem;
+    left: 20rem;
+  }
+  .trickImage2 {
+    position: absolute;
+    top: 0rem;
+    left: 26rem;
+  }
+  .grid3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+  .grid4 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  }
+  .shiftTop2 {
+    margin-top: 0rem;
+  }
+  .productGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .grid5 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .alert {
+    position: fixed;
+    top: 0rem;
+    /* right: 3rem; */
+    right: 1rem;
+    z-index: 30;
+  }
+
+  .alertBox {
+    background-color: #20315c;
+    border-radius: 13px;
+    padding: 1rem;
+    width: 100%;
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .alertText {
+    color: #fff;
+    font-family: book;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .hideMobileAndTab {
+    display: block;
+  }
+  .mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2rem;
+  }
+  .padding {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  .heroDiv {
+    background-image: url(../public/heroImg6.jpg);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 20vh;
+    background-position-y: -30rem;
+    background-size: 100%;
+  }
+  .infoBoxContent1 {
+    position: absolute;
+    top: -9rem;
+    left: -4rem;
+  }
+  .infoBoxContent2 {
+    position: absolute;
+    top: 5rem;
+    left: -25rem;
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .flexBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 4rem;
+  }
+  .trickImage1 {
+    position: absolute;
+    top: 15rem;
+    left: 20rem;
+  }
+  .trickImage2 {
+    position: absolute;
+    top: 0rem;
+    left: 26rem;
+  }
+  .grid3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+  .grid4 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  }
+  .shiftTop2 {
+    margin-top: 0rem;
+  }
+  .productGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+  .grid5 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .alert {
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    z-index: 30;
+  }
+
+  .alertBox {
+    background-color: #20315c;
+    border-radius: 13px;
+    padding: 1rem;
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .alertText {
+    color: #fff;
+    font-family: book;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .hideMobileAndTab {
+    display: block;
+  }
+  .mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2rem;
+  }
+  .padding {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  .heroDiv {
+    background-image: url(../public/heroImg6.jpg);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: initial;
+    background-position: center top;
+    width: 100%;
+    height: 60vh;
+    z-index: -3;
+    /* opacity: 0.5; */
+    background-position-x: -1rem;
+    background-position-y: -17rem;
+    /* filter: blur(2px);
+    -webkit-filter: blur(2px); */
+  }
+  .infoBoxContent1 {
+    position: absolute;
+    top: 4rem;
+    left: -4rem;
+  }
+  .infoBoxContent2 {
+    position: absolute;
+    top: 20rem;
+    left: -25rem;
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .flexBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 4rem;
+  }
+  .trickImage1 {
+    position: absolute;
+    top: 15rem;
+    left: 20rem;
+  }
+  .trickImage2 {
+    position: absolute;
+    top: 0rem;
+    left: 26rem;
+  }
+
+  .grid3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+
+  .grid4 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  }
+  .shiftTop2 {
+    margin-top: 0rem;
+  }
+  .productGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .grid5 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .alert {
+    position: fixed;
+    top: 0rem;
+    right: 3rem;
+    z-index: 30;
+  }
+
+  .alertBox {
+    background-color: #20315c;
+    border-radius: 13px;
+    padding: 1rem;
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .alertText {
+    color: #fff;
+    font-family: book;
+  }
+}
