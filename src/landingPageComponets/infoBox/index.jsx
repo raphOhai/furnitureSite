@@ -24,7 +24,7 @@ const InfoBox = ({ name, price, discript, id }) => {
                 onClick={() => scrollToTop() & history.push("/products")}
                 className="ctaBtn pointer"
               >
-                <p className="ctaBtnText">Shop now</p>
+                <p className="ctaBtnText">Explore Products</p>
               </button>
             </div>
             <div className="flex center">
