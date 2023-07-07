@@ -10,7 +10,7 @@ export const ShowAlert = () => {
 export const AnimateOnScroll = (id) => {
   const ShowPriceLables = () => {
     const InfoBox = document.getElementById(id);
-    if (window.scrollY >= 150) {
+    if (window.scrollY >= 120) {
       InfoBox.classList.add("show");
     } else {
       InfoBox.classList.remove("show");
