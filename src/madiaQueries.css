@@ -6,7 +6,7 @@
 
 .cartItemGrid {
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .searchBarGrid {
   display: grid;
@@ -24,6 +24,9 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .hideMobileAndTab {
+    display: none;
+  }
+  .hideMobile {
     display: none;
   }
   .mainGrid {
@@ -130,6 +133,9 @@
   .hideMobileAndTab {
     display: none;
   }
+  .hideMobile {
+    display: none;
+  }
   .mainGrid {
     display: grid;
     grid-template-columns: 1fr;
@@ -233,6 +239,9 @@
 @media only screen and (min-width: 768px) {
   .hideMobileAndTab {
     display: none;
+  }
+  .hideMobile {
+    display: block;
   }
   .mainGrid {
     display: grid;
@@ -341,6 +350,9 @@
   .hideMobileAndTab {
     display: block;
   }
+  .hideMobile {
+    display: block;
+  }
   .mainGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -437,6 +449,9 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .hideMobileAndTab {
+    display: block;
+  }
+  .hideMobile {
     display: block;
   }
   .mainGrid {
@@ -542,12 +557,11 @@
   }
 }
 
-
-
 .searchBox {
   background-color: #f5f5f5;
   padding: 0.5rem;
   padding-left: 1.2rem;
+  border-radius: 10px;
 }
 
 .Searchbtn {

@@ -18,7 +18,7 @@ const Hero = () => {
               id={"Eeeeee"}
             />
           </div>
-          <div className="infoBoxContent2 hideMobileAndTab">
+          <div className="infoBoxContent2 hideMobile">
             <InfoBox
               name={"Antique rug"}
               price={"300,000"}

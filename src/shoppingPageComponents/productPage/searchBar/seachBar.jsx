@@ -33,7 +33,7 @@ const SeachBar = () => {
         <div className="flex end">
           <button
             onClick={() => Search(searchQuery, ResolveAction)}
-            className="Searchbtn"
+            className="Searchbtn pointer"
           >
             <p className="btnText1">Search</p>
           </button>
