@@ -4,12 +4,14 @@ import { addToCart } from "../../function/FingertippsApiCall";
 import { ShowAlert } from "../../function/alertFunctions";
 import Cart2 from "../../assets/cart2";
 import Animate from "../../function/Animation";
+import AlertMessage from "../alertMessage";
 
 const SearchResultCards = () => {
   const { searchResults } = useSelector((state) => state.searchItems);
-  Animate(searchResults)
+  Animate(searchResults);
   return (
     <div className="productGrid padding">
+
       {searchResults.products
         ? searchResults.products.map((item) => (
             <div key={item._id} className="slideDown">

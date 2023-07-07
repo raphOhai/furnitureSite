@@ -9,8 +9,9 @@ const Product = () => {
   return (
     <>
       <div className="stack gap4">
+        <AlertMessage />
         <Header />
-     
+
         <div className="">
           <SearchBar />
         </div>

@@ -3,10 +3,12 @@ import Header from "../../landingPageComponets/header";
 import SearchResultCards from "./searchResultCards";
 import SearchBar from "../productPage/searchBar";
 import Footer from "../../landingPageComponets/footer";
+import AlertMessage from "../alertMessage";
 
 const SearchPage = () => {
   return (
     <div>
+      <AlertMessage />
       <div className="stack gap4">
         <Header />
         <div className="">
