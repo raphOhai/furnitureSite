@@ -6,7 +6,7 @@
 
 .cartItemGrid {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr;
 }
 .searchBarGrid {
   display: grid;
@@ -558,4 +558,25 @@
   padding-left: 2rem;
   padding-right: 2rem;
   border-radius: 5px;
+}
+
+.decreaseBox {
+  padding: 1rem;
+  background-color: #aac1d3;
+  color: #2d2d1f;
+  height: 0.1rem;
+}
+
+.increaseBox {
+  padding: 1rem;
+  background-color: #002a4d;
+  color: #ffff;
+  height: 0.1rem;
+}
+
+.countBox {
+  padding: 1rem;
+  background-color: #ffff;
+  color: #2d2d1f;
+  height: 0.1rem;
 }

@@ -16,25 +16,34 @@ const Header = () => {
             onClick={() => scrollToTop() & history.push("/")}
             className="flex center"
           >
-            <div className="relative">
+            <div className="relative pointer">
               <div className="logoSvg">
                 <Logo />
               </div>
 
-              <p id="logoText" className="logoText ">rueBuy</p>
+              <p id="logoText" className="logoText ">
+                rueBuy
+              </p>
             </div>
           </div>
           <div className="flex center">
             <div className="headerContent gap2">
-              <p className="smallHeading hideMobileAndTab">Home</p>
+              <p
+                onClick={() => scrollToTop() & history.push("/")}
+                className="smallHeading hideMobileAndTab pointer"
+              >
+                Home
+              </p>
               <p
                 onClick={() => scrollToTop() & history.push("/products")}
-                className="smallHeading hideMobileAndTab"
+                className="smallHeading hideMobileAndTab pointer"
               >
                 Shop Now
               </p>
-              <p className=" smallHeading hideMobileAndTab">Categories</p>
-              <div onClick={() => scrollToTop() & history.push("/cart")}>
+              <p className=" smallHeading hideMobileAndTab pointer">
+                Categories
+              </p>
+              <div className="pointer" onClick={() => scrollToTop() & history.push("/cart")}>
                 <CartIcon />
               </div>
 

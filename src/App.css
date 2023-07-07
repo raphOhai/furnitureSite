@@ -332,26 +332,6 @@ input:focus {
   max-width: 40rem;
 }
 
-.decreaseBox {
-  padding: 1rem;
-  background-color: #aac1d3;
-  color: #2d2d1f;
-  height: 0.5rem;
-}
-
-.increaseBox {
-  padding: 1rem;
-  background-color: #002a4d;
-  color: #ffff;
-  height: 0.5rem;
-}
-
-.countBox {
-  padding: 1rem;
-  background-color: #ffff;
-  color: #2d2d1f;
-  height: 0.5rem;
-}
 
 .pointer {
   cursor: pointer;

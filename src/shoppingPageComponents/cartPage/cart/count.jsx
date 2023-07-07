@@ -11,14 +11,14 @@ const Count = ({ count, item }) => {
         onClick={() => decreaseItemCount(item, dispatch)}
          className="decreaseBox pointer"
       >
-        <div style={{ marginTop: "-.5rem" }} className="flex center">
+        <div style={{ marginTop: "-.6rem" }} className="flex center">
           <div>
             <p>-</p>
           </div>
         </div>
       </div>
       <div className="countBox">
-        <div style={{ marginTop: "-.5rem" }} className="flex center">
+        <div style={{ marginTop: "-.6rem" }} className="flex center">
           <div>
             <p>{count}</p>
           </div>
@@ -28,7 +28,7 @@ const Count = ({ count, item }) => {
         onClick={() => increaseItemCount(item, dispatch)}
         className="increaseBox pointer"
       >
-        <div style={{ marginTop: "-.5rem" }} className="flex center">
+        <div style={{ marginTop: "-.6rem" }} className="flex center">
           <div>
             <p>+</p>
           </div>
