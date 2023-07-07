@@ -1,6 +1,9 @@
 import React from "react";
+import { scrollToTop } from "../../function/FingertippsApiCall";
+import { useHistory } from "react-router-dom";
 
-const InfoBox = ({name, price, discript, id}) => {
+const InfoBox = ({ name, price, discript, id }) => {
+  const history = useHistory();
   return (
     <div id={id} className="fadeIn2">
       <div className="">
@@ -16,6 +19,13 @@ const InfoBox = ({name, price, discript, id}) => {
               <div className="flex start">
                 <p className="infoPrice">₦{price}</p>
               </div>
+              <div className=""></div>
+              <button
+                onClick={() => scrollToTop() & history.push("/products")}
+                className="ctaBtn"
+              >
+                <p className="ctaBtnText">Shop now</p>
+              </button>
             </div>
             <div className="flex center">
               <div className="traingle glasify"></div>

@@ -395,3 +395,15 @@ input:focus {
   padding: 0rem;
 }
 
+.ctaBtn {
+  background-color: transparent;
+  border: 2px solid #e1e1bb;
+  padding: .8rem;
+  border-radius: 30px;
+}
+
+.ctaBtnText {
+  color: #e1e1bb;
+  font-family: book;
+  font-size: 1rem;
+}
