@@ -43,9 +43,9 @@ export const addToCart = (item) => {
 };
 
 export const getCartItems = (items, dispatch) => {
-  if (items ? items.length > 0 : "") {
-    return;
-  }
+  // if (items ? items.length > 0 : "") {
+  //   return;
+  // }
   const store = "644ecffe38fa62672d349ebd";
   const quest = JSON.parse(localStorage.getItem("quest"));
   fetch("https://fingertipps.store/getcart", {

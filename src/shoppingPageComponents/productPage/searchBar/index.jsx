@@ -3,7 +3,7 @@ import SeachBar from "./seachBar";
 
 const SearchBar = () => {
   return (
-    <div style={{ marginTop: "10rem" }} className="flex center ">
+    <div style={{ marginTop: "10rem" }} className="flex center padding ">
       <div className="stack gap3">
         <h1 className="bigText textCenter  widthRestrict2">
           Crafted with excellent material.

@@ -27,7 +27,7 @@ const SeachBar = () => {
 
           <input
             onChange={(e) => dispatch(saveSearchQuery(e.target.value))}
-            placeholder="search anything"
+            placeholder="search "
           />
         </div>
         <div className="flex end">

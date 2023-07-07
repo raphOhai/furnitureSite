@@ -18,14 +18,14 @@ const Hero = () => {
               id={"Eeeeee"}
             />
           </div>
-          <div className="infoBoxContent2 hideMobileAndTa">
+          {/* <div className="infoBoxContent2 hideMobileAndTa">
             <InfoBox
               name={"Antique rug"}
               price={"300,000"}
               discript={"Italian Antique rugs "}
               id={"Eeee"}
             />
-          </div>
+          </div> */}
           <p></p>
           {/* <div className="infoBoxContent3">
           <InfoBox />
