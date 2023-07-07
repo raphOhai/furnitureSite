@@ -8,7 +8,7 @@ const SearchBar = () => {
         <h1 className="bigText textCenter  widthRestrict2">
           Crafted with excellent material.
         </h1>
-        <p className="regularText textCenter  widthRestrict2">
+        <p className="regularText textCenter  widthRestrict2 hideMobileAndTab">
           Donec mattis porta eros, aliquet finibus risus interdum at. Nulla
           vivethe as it was for us to know what was to be done.
         </p>
