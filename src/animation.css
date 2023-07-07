@@ -30,7 +30,7 @@
 .slideDown {
   opacity: 0;
   filter: blur(2px);
-  transform: translatey(-5%);
+  transform: translateY(5%);
   transition: all 1s;
 }
 

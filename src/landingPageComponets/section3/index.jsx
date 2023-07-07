@@ -4,7 +4,7 @@ import Btn from "../btn/Btn";
 import Animate from "../../function/Animation";
 
 const Section3 = () => {
-  Animate()
+  Animate();
   return (
     <div className="padding">
       <div className="grid2">
@@ -45,7 +45,7 @@ const Section3 = () => {
               </p>
             </div>
             <div className="stack gap3">
-              <div className="flexBox">
+              {/* <div className="flexBox">
                 <div>
                   <div className="stack gap">
                     <p className="grayText widthRestrict">
@@ -78,8 +78,9 @@ const Section3 = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
+
             <Btn />
           </div>
         </div>
