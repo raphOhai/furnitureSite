@@ -42,9 +42,6 @@ const Header = () => {
               >
                 Shop Now
               </p>
-              <p className=" smallHeading hideMobileAndTab pointer">
-                Categories
-              </p>
               <div
                 className="pointer"
                 onClick={() => scrollToTop() & history.push("/cart")}
