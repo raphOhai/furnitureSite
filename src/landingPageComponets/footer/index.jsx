@@ -23,7 +23,7 @@ const Footer = () => {
             </div>
             <div className="flex gap">
               <div className="inputBox">
-                <input placeholder="Enter your e-mail" />
+                <input placeholder="Enter your name" />
               </div>
               <div className="inputBox">
                 <input placeholder="Enter your e-mail" />
