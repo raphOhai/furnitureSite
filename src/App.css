@@ -409,12 +409,25 @@ input:focus {
 }
 
 .cartNumber {
-  position:absolute;
-  top: -.8rem;
-  right:-.5rem;
+  position: absolute;
+  top: -0.8rem;
+  right: -0.5rem;
   background-color: var(--btn--Color);
   color: #fff;
   border-radius: 50%;
   width: 20px;
   height: 20px;
+}
+
+.loadmoreBtn {
+  background-color: transparent;
+  border: 2px solid var(--btn--Color);
+  padding: 1rem 2rem;
+  border-radius: 30px;
+}
+
+.loadmoreBtn p {
+  color: #5b5b5b;
+  font-family: book;
+  font-size: 1rem;
 }

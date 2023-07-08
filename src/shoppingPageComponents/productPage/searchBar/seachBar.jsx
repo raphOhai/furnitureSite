@@ -4,16 +4,18 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   saveSearchQuery,
   saveSearchResults,
+  saveSearchResultsPage,
 } from "../../../reducer/searchItems";
 import { Search } from "../../../function/FingertippsApiCall";
 import { useHistory } from "react-router-dom";
 
 const SeachBar = () => {
   const dispatch = useDispatch();
-  const history = useHistory()
+  const history = useHistory();
   const { searchQuery } = useSelector((state) => state.searchItems);
   const ResolveAction = (items) => {
     dispatch(saveSearchResults(items));
+    dispatch(saveSearchResultsPage(items.currentPage));
     history.push("/search");
   };
 

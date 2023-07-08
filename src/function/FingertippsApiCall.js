@@ -159,7 +159,7 @@ export const deleteSingleCartItem = (item, dispatch) => {
         // setOpen(true);
         // setPush(false);
         // dispatch({ type: "CLR" });
-        console.log(data)
+        console.log(data);
         dispatch(updateCartCount(data.cartCount));
       }
     })
@@ -270,21 +270,58 @@ export const Search = (searchQuery, ResolveAction) => {
     .catch((err) => {});
 };
 
-export const GetCartLength = (ResolveAction) => {
+
+export const GetMoreSearch = (searchQuery, page, ResolveAction) => {
   fetch("https://fingertipps.store/search", {
     method: "post",
     headers: {
       "content-Type": "application/json",
     },
     body: JSON.stringify({
-      ownId: quest._id,
-      storeId: store,
+      search: searchQuery,
+      id: store,
+      page: page
     }),
   })
     .then((res) => res.json())
     .then((results) => {
       console.log(results);
       ResolveAction(results);
+    })
+    .catch((err) => {});
+};
+
+// export const GetCartLength = (ResolveAction) => {
+//   fetch("https://fingertipps.store/search", {
+//     method: "post",
+//     headers: {
+//       "content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       ownId: quest._id,
+//       storeId: store,
+//     }),
+//   })
+//     .then((res) => res.json())
+//     .then((results) => {
+//       console.log(results);
+//       ResolveAction(results);
+//     })
+//     .catch((err) => {});
+// };
+export const GetMoreProduct = (page, resolve) => {
+  fetch(`https://fingertipps.store/user/collection1/644ecffe38fa62672d349ebd`, {
+    method: "post",
+    headers: {
+      "content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      page: page,
+    }),
+  })
+    .then((res) => res.json())
+    .then((result) => {
+      resolve(result);
     })
     .catch((err) => {});
 };

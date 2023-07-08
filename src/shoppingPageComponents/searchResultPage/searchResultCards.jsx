@@ -1,15 +1,26 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart } from "../../function/FingertippsApiCall";
+import { GetMoreSearch, addToCart } from "../../function/FingertippsApiCall";
 import { ShowAlert } from "../../function/alertFunctions";
 import Cart2 from "../../assets/cart2";
 import Animate from "../../function/Animation";
 import AlertMessage from "../alertMessage";
+import {
+  apendSearchResults,
+  saveSearchResults,
+  saveSearchResultsPage,
+} from "../../reducer/searchItems";
 
 const SearchResultCards = () => {
-  const { searchResults } = useSelector((state) => state.searchItems);
+  const { searchResults, searchQuery, searchResultPage } = useSelector(
+    (state) => state.searchItems
+  );
   Animate(searchResults);
   const dispatch = useDispatch();
+  const resolve5 = (items) => {
+    dispatch(apendSearchResults(items.products));
+    dispatch(saveSearchResultsPage(items.currentPage));
+  };
   return (
     <>
       <div className="productGrid padding">
@@ -45,6 +56,17 @@ const SearchResultCards = () => {
         ) : (
           <></>
         )}
+      </div>
+
+      <div style={{ marginTop: "4rem" }} className="flex center">
+        <button
+          onClick={() =>
+            GetMoreSearch(searchQuery, searchResultPage + 1, resolve5)
+          }
+          className="loadmoreBtn pointer"
+        >
+          <p>loadmore</p>
+        </button>
       </div>
       {searchResults.products.length < 1 ? (
         <div className="flex center">
