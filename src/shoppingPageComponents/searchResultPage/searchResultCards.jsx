@@ -58,16 +58,6 @@ const SearchResultCards = () => {
         )}
       </div>
 
-      <div style={{ marginTop: "4rem" }} className="flex center">
-        <button
-          onClick={() =>
-            GetMoreSearch(searchQuery, searchResultPage + 1, resolve5)
-          }
-          className="loadmoreBtn pointer"
-        >
-          <p>loadmore</p>
-        </button>
-      </div>
       {searchResults ? (
         searchResults.products.length < 1 ? (
           <div className="flex center">
@@ -92,7 +82,16 @@ const SearchResultCards = () => {
             </div>
           </div>
         ) : (
-          ""
+          <div style={{ marginTop: "4rem" }} className="flex center">
+            <button
+              onClick={() =>
+                GetMoreSearch(searchQuery, searchResultPage + 1, resolve5)
+              }
+              className="loadmoreBtn pointer"
+            >
+              <p>loadmore</p>
+            </button>
+          </div>
         )
       ) : (
         ""
