@@ -38,8 +38,8 @@
     column-gap: 2rem;
   }
   .padding {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .heroDiv {
     background-image: url(../public/heroImg6.jpg);
@@ -53,7 +53,7 @@
   }
   .infoBoxContent1 {
     position: absolute;
-    top: -2rem;
+    top: -3rem;
     left: -2rem;
   }
   .infoBoxContent2 {
