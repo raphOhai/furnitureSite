@@ -5,29 +5,34 @@ import { UserId } from "../../hooks/userId";
 
 import { useDispatch, useSelector } from "react-redux";
 import { saveProducts } from "../../../reducer/products";
-import { addToCart } from "../../../function/FingertippsApiCall";
+import { addToCart, getCartItems } from "../../../function/FingertippsApiCall";
 import { ShowAlert } from "../../../function/alertFunctions";
 import Animate from "../../../function/Animation";
+import { updateCartCount } from "../../../reducer/cartItems";
 
 const ProductCards = () => {
   const { productsItems } = useSelector((state) => state.products);
   const dispatch = useDispatch();
-  Animate(productsItems )
+  Animate(productsItems);
   UserId();
   useEffect(() => {
     if (productsItems ? productsItems.length > 0 : "") {
       return;
     }
+    getCartItems(dispatch);
     console.log(uuidv4());
-    fetch(`https://fingertipps.store/user/collection1/644ecffe38fa62672d349ebd`, {
-      method: "post",
-      headers: {
-        "content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // page: currentProductPage,
-      }),
-    })
+    fetch(
+      `https://fingertipps.store/user/collection1/644ecffe38fa62672d349ebd`,
+      {
+        method: "post",
+        headers: {
+          "content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // page: currentProductPage,
+        }),
+      }
+    )
       .then((res) => res.json())
       .then((result) => {
         dispatch(saveProducts(result.products));
@@ -49,7 +54,10 @@ const ProductCards = () => {
                       alt=""
                     />
                     <div
-                      onClick={() => addToCart(item) & ShowAlert()}
+                      onClick={() =>
+                        addToCart(item, dispatch) &
+                        ShowAlert() 
+                      }
                       className="flex center"
                     >
                       <div className="flex gap pointer">

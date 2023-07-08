@@ -1,8 +1,8 @@
 export const ShowAlert = () => {
   const AlertBox = document.getElementById("alertBox");
-  AlertBox.classList.add("show");
+  AlertBox?.classList.add("show");
   const hideAlert = () => {
-    AlertBox.classList.remove("show");
+    AlertBox?.classList.remove("show");
   };
   setTimeout(hideAlert, 1000);
 };

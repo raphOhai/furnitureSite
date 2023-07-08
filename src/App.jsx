@@ -10,6 +10,7 @@ import SearchPage from "./shoppingPageComponents/searchResultPage";
 import Loader from "./loaderComponents";
 
 function App() {
+  
   return (
     <>
       <Loader />

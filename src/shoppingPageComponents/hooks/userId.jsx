@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { v4 as uuidv4 } from 'uuid';
+import { getCartItems } from "../../function/FingertippsApiCall";
+import { useDispatch } from "react-redux";
 
 export const UserId = () => {
+  const dispatch = useDispatch()
   return useEffect(() => {
     const quest = JSON.parse(localStorage.getItem("quest"));
     if (!quest) {
@@ -10,5 +13,6 @@ export const UserId = () => {
     //   dispatch(saveUser(quest));
       localStorage.setItem("quest", JSON.stringify(quest));
     }
+    getCartItems(dispatch);
   }, []);
 };

@@ -5,9 +5,11 @@ import { useHistory } from "react-router-dom";
 import { scrollToTop } from "../../function/FingertippsApiCall";
 import Logo2 from "../../assets/Logo2";
 import Logo from "../../assets/logo";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const history = useHistory();
+  const { itemsInCart, CartCount } = useSelector((state) => state.cartItems);
   return (
     <>
       <div id="top" className="fixed  maxWidt">
@@ -43,8 +45,16 @@ const Header = () => {
               <p className=" smallHeading hideMobileAndTab pointer">
                 Categories
               </p>
-              <div className="pointer" onClick={() => scrollToTop() & history.push("/cart")}>
-                <CartIcon />
+              <div
+                className="pointer"
+                onClick={() => scrollToTop() & history.push("/cart")}
+              >
+                <div className="relative">
+                  <div className="cartNumber flex center">
+                    {CartCount ? CartCount : 0}
+                  </div>
+                  <CartIcon />
+                </div>
               </div>
 
               <UserIcon />

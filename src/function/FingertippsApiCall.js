@@ -3,11 +3,12 @@ import {
   deleteItemIncart,
   inscreaseItemCount,
   saveCartItems,
+  updateCartCount,
 } from "../reducer/cartItems";
 const store = "644ecffe38fa62672d349ebd";
 const quest = JSON.parse(localStorage.getItem("quest"));
 
-export const addToCart = (item) => {
+export const addToCart = (item, dispatch) => {
   const store = "644ecffe38fa62672d349ebd";
   const quest = JSON.parse(localStorage.getItem("quest"));
   fetch("https://fingertipps.store/addtocart", {
@@ -34,6 +35,8 @@ export const addToCart = (item) => {
         console.log("  postCartAuth cart error", data.error);
       } else {
         console.log("success");
+        console.log(data);
+        dispatch(updateCartCount(data.cartCount));
       }
     })
     .catch((err) => {
@@ -42,7 +45,7 @@ export const addToCart = (item) => {
     });
 };
 
-export const getCartItems = (items, dispatch) => {
+export const getCartItems = (dispatch) => {
   // if (items ? items.length > 0 : "") {
   //   return;
   // }
@@ -156,6 +159,8 @@ export const deleteSingleCartItem = (item, dispatch) => {
         // setOpen(true);
         // setPush(false);
         // dispatch({ type: "CLR" });
+        console.log(data)
+        dispatch(updateCartCount(data.cartCount));
       }
     })
     .catch(() => {});
@@ -255,6 +260,25 @@ export const Search = (searchQuery, ResolveAction) => {
     body: JSON.stringify({
       search: searchQuery,
       id: store,
+    }),
+  })
+    .then((res) => res.json())
+    .then((results) => {
+      console.log(results);
+      ResolveAction(results);
+    })
+    .catch((err) => {});
+};
+
+export const GetCartLength = (ResolveAction) => {
+  fetch("https://fingertipps.store/search", {
+    method: "post",
+    headers: {
+      "content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      ownId: quest._id,
+      storeId: store,
     }),
   })
     .then((res) => res.json())

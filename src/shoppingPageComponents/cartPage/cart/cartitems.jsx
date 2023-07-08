@@ -15,7 +15,7 @@ const Cartitems = () => {
   const { itemsInCart, total } = useSelector((state) => state.cartItems);
   const { name, email, address } = useSelector((state) => state.userDetails);
   useEffect(() => {
-    getCartItems(itemsInCart, dispatch);
+    getCartItems( dispatch);
   }, []);
 
   const config = {
