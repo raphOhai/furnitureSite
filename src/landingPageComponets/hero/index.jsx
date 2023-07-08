@@ -6,9 +6,9 @@ const Hero = () => {
   AnimateOnScroll("Eeeeee");
   AnimateOnScroll("Eeee");
   return (
-    <div className=" overFLowHiden bacGroun">
-      <div></div>
-      <div className="flex center heroDiv  overFLowHiden">
+    <div className=" overFLowHiden bacGroun ">
+     
+      <div className="flex center heroDiv  overFLowHiden hideFold">
         <div className="relative">
           <div className="infoBoxContent1 hideMobileAndTa">
             <InfoBox

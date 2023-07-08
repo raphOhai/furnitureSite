@@ -20,6 +20,9 @@
   .infoBoxContent2 {
     display: none;
   }
+  .hideFold{
+    display: none;
+  }
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -42,7 +45,7 @@
     background-image: url(../public/heroImg6.jpg);
     background-repeat: no-repeat;
     width: 100vw;
-    height: 50rem;
+    height: 700px;
 
     background-position-y: -1rem;
     background-position-x: -10rem;
@@ -50,7 +53,7 @@
   }
   .infoBoxContent1 {
     position: absolute;
-    top: -7rem;
+    top: -2rem;
     left: -2rem;
   }
   .infoBoxContent2 {
