@@ -68,28 +68,32 @@ const SearchResultCards = () => {
           <p>loadmore</p>
         </button>
       </div>
-      {searchResults.products.length < 1 ? (
-        <div className="flex center">
-          <div className="stack gap">
-            <div className="flex center">
-              <img
-                className="responsive1"
-                src="/Not Found illustration.png"
-                alt=""
-              />
-            </div>
+      {searchResults ? (
+        searchResults.products.length < 1 ? (
+          <div className="flex center">
+            <div className="stack gap">
+              <div className="flex center">
+                <img
+                  className="responsive1"
+                  src="/Not Found illustration.png"
+                  alt=""
+                />
+              </div>
 
-            <div className="flex center">
-              <div className="stack gap">
-                <p className="smallHeading textCenter">Result Not Found</p>
+              <div className="flex center">
+                <div className="stack gap">
+                  <p className="smallHeading textCenter">Result Not Found</p>
 
-                <p className="regularText textCenter ">
-                  Please try again with another keywords
-                </p>
+                  <p className="regularText textCenter ">
+                    Please try again with another keywords
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        ) : (
+          ""
+        )
       ) : (
         ""
       )}
