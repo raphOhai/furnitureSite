@@ -4,9 +4,8 @@ import Add from "../../assets/add";
 import { useHistory } from "react-router-dom";
 import Animate from "../../function/Animation";
 
-
 const Section1 = () => {
-  Animate()
+  Animate();
   return (
     <div>
       <div className="padding">
@@ -15,8 +14,11 @@ const Section1 = () => {
             <div className="stack gap4">
               <h1 className="bigText">Crafted with excellent material.</h1>
               <p className="regularText">
-                Donec mattis porta eros, aliquet finibus risus interdum at.
-                Nulla vivethe as it was for us to know what was to be done.
+                Versatile Design: Whether you're furnishing a cozy apartment or
+                a spacious home, our furniture is designed to seamlessly
+                integrate into any space. We offer a diverse range of styles,
+                from timeless classics to contemporary masterpieces, catering to
+                various interior design preferences
               </p>
               <Btn />
             </div>

@@ -7,7 +7,7 @@ import Return from "../../assets/Return";
 import Animate from "../../function/Animation";
 
 const Section2 = () => {
-  Animate()
+  Animate();
   return (
     <div className="padding ">
       <div className="grid2">
@@ -17,30 +17,31 @@ const Section2 = () => {
               <h1 className="bigText">Why Choose Us</h1>
 
               <p className="grayText widthRestrict">
-                Donec mattis porta eros, aliquet finibus risus interdum at.
-                Nulla vivethe as it was for us to know what was to be done. the
+                At TrueBuy, we take great pride in offering you a truly
+                exceptional furniture experience that goes beyond mere
+                functionality and aesthetics. Here's why you should choose us
               </p>
             </div>
             <div className="stack gap3">
               <div className="flexBox">
                 <div>
                   <div className="stack gap">
-                    <Truck />
-                    <h2 className="smallHeading">Fast & Free Shipping </h2>
+                    <Shopbag />
+                    <h2 className="smallHeading">Easy to Shop</h2>
                     <p className="grayText widthRestrict">
-                      Donec mattis porta eros, aliquet finibus risus interdum
-                      at. Nulla vivethe as it was
+                      Shop with ease on Our web app and our mobile app
                     </p>
                   </div>
                 </div>
                 <div>
                   <div className="stack gap">
-                    <Shopbag />
-                    <h2 className="smallHeading">Easy to Shop</h2>
-                    <p className="grayText widthRestrict">
-                      Donec mattis porta eros, aliquet finibus risus interdum
-                      at. Nulla vivethe as it was
-                    </p>
+                    <Truck />
+                    <h2 className="smallHeading">Fast & Free Shipping </h2>
+                    <div className="widthRestrict">
+                      <p className="grayText widthRestrict">
+                        Get your funiture Delivered in less than 24 hours
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -49,10 +50,10 @@ const Section2 = () => {
                 <div>
                   <div className="stack gap">
                     <Support />
-                    <h2 className="smallHeading">Fast & Free Shipping </h2>
+                    <h2 className="smallHeading">24/Support </h2>
                     <p className="grayText widthRestrict">
-                      Donec mattis porta eros, aliquet finibus risus interdum
-                      at. Nulla vivethe as it was
+                      At TrueBuy, we pride ourselves on providing exceptional
+                      customer service that exceeds your expectations.
                     </p>
                   </div>
                 </div>
@@ -62,8 +63,8 @@ const Section2 = () => {
                     <Return />
                     <h2 className="smallHeading">Easy to Shop</h2>
                     <p className="grayText widthRestrict">
-                      Donec mattis porta eros, aliquet finibus risus interdum
-                      at. Nulla vivethe as it was
+                      you can return purchased item with 3weeks from the
+                      purchased date!
                     </p>
                   </div>
                 </div>
@@ -77,7 +78,11 @@ const Section2 = () => {
               <div className="imageTrick1Dot slideDown group">
                 <YellowDotted />
               </div>
-              <img src="/choose.png" className="responsive sideSlide1 group" alt="" />
+              <img
+                src="/choose.png"
+                className="responsive sideSlide1 group"
+                alt=""
+              />
             </div>
           </div>
         </div>

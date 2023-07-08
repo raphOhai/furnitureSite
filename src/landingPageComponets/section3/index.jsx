@@ -38,10 +38,11 @@ const Section3 = () => {
               </h1>
 
               <p className="grayText widthRestrict ">
-                Donec mattis porta eros, aliquet finibus risus interdum at.
-                Nulla vivethe as it was for us to know what was to be done. the
-                this is a long post for the text.`This small text has to be
-                place here, since this is a place holder. You can also chane it.
+                Exquisite Craftsmanship: Our skilled artisans pour their
+                expertise, passion, and attention to detail into every piece
+                they create. From intricate joinery to flawless upholstery, our
+                furniture reflects a level of craftsmanship that is second to
+                none
               </p>
             </div>
             <div className="stack gap3">

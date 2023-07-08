@@ -6,11 +6,10 @@ const SearchBar = () => {
     <div style={{ marginTop: "10rem" }} className="flex center padding ">
       <div className="stack gap3">
         <h1 className="bigText textCenter  widthRestrict2">
-          Crafted with excellent material.
+          Handcrafted with attention to detail
         </h1>
         <p className="regularText textCenter  widthRestrict2 hideMobileAndTab">
-          Donec mattis porta eros, aliquet finibus risus interdum at. Nulla
-          vivethe as it was for us to know what was to be done.
+           with your comfort in mind
         </p>
 
         <SeachBar />
