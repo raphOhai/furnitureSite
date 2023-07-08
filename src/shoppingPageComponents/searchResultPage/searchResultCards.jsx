@@ -11,9 +11,10 @@ const SearchResultCards = () => {
   Animate(searchResults);
   const dispatch = useDispatch();
   return (
-    <div className="productGrid padding">
-      {searchResults.products
-        ? searchResults.products.map((item) => (
+    <>
+      <div className="productGrid padding">
+        {searchResults.products ? (
+          searchResults.products.map((item) => (
             <div key={item._id} className="slideDown">
               <div className="stack gap">
                 <div className="card">
@@ -41,8 +42,36 @@ const SearchResultCards = () => {
               </div>
             </div>
           ))
-        : ""}
-    </div>
+        ) : (
+          <></>
+        )}
+      </div>
+      {searchResults.products.length < 1 ? (
+        <div className="flex center">
+          <div className="stack gap">
+            <div className="flex center">
+              <img
+                className="responsive1"
+                src="/Not Found illustration.png"
+                alt=""
+              />
+            </div>
+
+            <div className="flex center">
+              <div className="stack gap">
+                <p className="smallHeading textCenter">Result Not Found</p>
+
+                <p className="regularText textCenter ">
+                  Please try again with another keywords
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
+    </>
   );
 };
 
