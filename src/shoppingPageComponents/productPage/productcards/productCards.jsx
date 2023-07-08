@@ -85,7 +85,7 @@ const ProductCards = () => {
                     {" "}
                     {item.name.slice(0, 14)}
                   </p>
-                  <p className="smallHeading">${item.price.toLocaleString()}</p>
+                  <p className="smallHeading">₦{item.price.toLocaleString()}</p>
                 </div>
               </div>
             ))

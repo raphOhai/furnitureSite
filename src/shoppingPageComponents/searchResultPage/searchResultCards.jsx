@@ -49,7 +49,7 @@ const SearchResultCards = () => {
                   </div>
                 </div>
                 <p className="grayText capitalize"> {item.name.slice(0, 14)}</p>
-                <p className="smallHeading">${item.price.toLocaleString()}</p>
+                <p className="smallHeading">₦{item.price.toLocaleString()}</p>
               </div>
             </div>
           ))
