@@ -86,7 +86,7 @@ const Cartitems = () => {
                   <div className="">
                     <div className="stack gap">
                       <p>{item.name}</p>
-                      <p>₦{item.price}</p>
+                      <p>₦{item.price.toLocaleString()}</p>
                       <Count
                         count={item.count
                           .reduce((a, c) => a + c, 0)
