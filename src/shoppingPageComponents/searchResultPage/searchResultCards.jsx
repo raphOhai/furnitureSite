@@ -23,6 +23,15 @@ const SearchResultCards = () => {
   };
   return (
     <>
+      {searchResults.products.length < 1 ? (
+        ""
+      ) : (
+        <div className="flex center">
+          <p className="regularText textCenter">
+            showing result for "{searchQuery}"
+          </p>
+        </div>
+      )}
       <div className="productGrid padding">
         {searchResults.products ? (
           searchResults.products.map((item) => (
