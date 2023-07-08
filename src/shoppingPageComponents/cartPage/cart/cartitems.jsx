@@ -63,8 +63,6 @@ const Cartitems = () => {
                       <p className="smallHeading textCenter">
                         Your Cart is Empty
                       </p>
-
-                      
                     </div>
                   </div>
                 </div>
@@ -133,7 +131,7 @@ const Cartitems = () => {
           </div> */}
         </div>
 
-        <PaystackButton className="btn2" {...componentProps} />
+        <PaystackButton className="btn2 pointer" {...componentProps} />
       </div>
     </div>
   );
