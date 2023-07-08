@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../function/FingertippsApiCall";
 import { ShowAlert } from "../../function/alertFunctions";
 import Cart2 from "../../assets/cart2";
@@ -9,9 +9,9 @@ import AlertMessage from "../alertMessage";
 const SearchResultCards = () => {
   const { searchResults } = useSelector((state) => state.searchItems);
   Animate(searchResults);
+  const dispatch = useDispatch();
   return (
     <div className="productGrid padding">
-
       {searchResults.products
         ? searchResults.products.map((item) => (
             <div key={item._id} className="slideDown">
@@ -24,7 +24,7 @@ const SearchResultCards = () => {
                       alt=""
                     />
                     <div
-                      onClick={() => addToCart(item) & ShowAlert()}
+                      onClick={() => addToCart(item, dispatch) & ShowAlert()}
                       className="flex center"
                     >
                       <div className="flex gap pointer">
