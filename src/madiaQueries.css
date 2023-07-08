@@ -42,7 +42,7 @@
     padding-right: 1rem;
   }
   .heroDiv {
-    background-image: url(../public/heroImg6.jpg);
+    background-image: url("https://res.cloudinary.com/dmiu0s6fe/image/upload/v1688828764/heroImg6_jdufrn.jpg");
     background-repeat: no-repeat;
     width: 100vw;
     height: 700px;
@@ -149,7 +149,7 @@
     padding-right: 2rem;
   }
   .heroDiv {
-    background-image: url(../public/heroImg6.jpg);
+    background-image: url("https://res.cloudinary.com/dmiu0s6fe/image/upload/v1688828764/heroImg6_jdufrn.jpg");
     background-repeat: no-repeat;
     width: 100vw;
     height: auto;
@@ -256,7 +256,7 @@
     padding-right: 3rem;
   }
   .heroDiv {
-    background-image: url(../public/heroImg6.jpg);
+    background-image: url("https://res.cloudinary.com/dmiu0s6fe/image/upload/v1688828764/heroImg6_jdufrn.jpg");
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: initial;
@@ -366,7 +366,7 @@
     padding-right: 8rem;
   }
   .heroDiv {
-    background-image: url(../public/heroImg6.jpg);
+    background-image: url("https://res.cloudinary.com/dmiu0s6fe/image/upload/v1688828764/heroImg6_jdufrn.jpg");
     background-repeat: no-repeat;
     width: 100vw;
     height: 20vh;
@@ -467,7 +467,7 @@
     padding-right: 8rem;
   }
   .heroDiv {
-    background-image: url(../public/heroImg6.jpg);
+    background-image: url("https://res.cloudinary.com/dmiu0s6fe/image/upload/v1688828764/heroImg6_jdufrn.jpg");
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: initial;
