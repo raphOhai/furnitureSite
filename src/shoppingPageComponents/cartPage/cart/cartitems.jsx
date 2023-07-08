@@ -44,10 +44,10 @@ const Cartitems = () => {
 
   return (
     <div className="grid5 gap2 padding  maxWidth">
-      <div className="flex start ">
+      <div className="">
         <div className="stack gap4">
           {itemsInCart.length < 1 ? (
-            <div style={{marginLeft:"2rem"}} className="flex center">
+            <div className="flex center">
               <div className="flex center">
                 <div className="stack gap">
                   <div className="flex center">
