@@ -17,7 +17,7 @@ import {
 import { ShowAlert } from "../../../function/alertFunctions";
 import Animate from "../../../function/Animation";
 import { updateCartCount } from "../../../reducer/cartItems";
-import { GetProducts, addToCart, getCartItems } from "fingertipps-handshakes";
+import { GetProducts, InitializeHandShake, addToCart, getCartItems } from "fingertipps-handshakes";
 
 const ProductCards = () => {
   const store = "644ecffe38fa62672d349ebd";
@@ -30,6 +30,16 @@ const ProductCards = () => {
     dispatch(saveProducts(item.products));
     dispatch(saveProductPage(item.currentPage));
   };
+
+  useEffect(() => {
+    if (quest) {
+      InitializeHandShake(
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRlY2ZmZTM4ZmE2MjY3MmQzNDllYmQiLCJpYXQiOjE2ODg1ODkwNTJ9.vzbL2l2n2yQxPCfzLClGjEkruThNFfTmNH3yIXsP_aY",
+        storeId,
+        quest
+      );
+    }
+  }, [quest]);
 
   const resolve2 = (item) => {
     dispatch(apendProducts(item.products));

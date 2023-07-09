@@ -14,9 +14,7 @@ const Cart = () => {
   const resolveFunction = (result) => {
     dispatch(saveCartItems(result));
   };
-  useEffect(() => {
-    getCartItems(resolveFunction);
-  }, []);
+ 
 
   return (
     <div className="stack gap4">
