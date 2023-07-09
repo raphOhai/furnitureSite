@@ -15,7 +15,7 @@ const Cart = () => {
     dispatch(saveCartItems(result));
   };
   useEffect(() => {
-    getCartItems(storeId, visitorId, resolveFunction);
+    getCartItems(resolveFunction);
   }, []);
 
   return (

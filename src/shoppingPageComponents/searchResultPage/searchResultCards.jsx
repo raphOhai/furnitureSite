@@ -58,13 +58,7 @@ const SearchResultCards = () => {
                     />
                     <div
                       onClick={() =>
-                        addToCart(
-                          visitorId,
-                          storeId,
-                          item,
-                          resolve3,
-                          errorCather
-                        ) & ShowAlert()
+                        addToCart(item, resolve3, errorCather) & ShowAlert()
                       }
                       className="flex center"
                     >
@@ -114,12 +108,7 @@ const SearchResultCards = () => {
           <div style={{ marginTop: "4rem" }} className="flex center">
             <button
               onClick={() =>
-                SearchProducts(
-                  storeId,
-                  searchQuery,
-                  resolve5,
-                  searchResultPage + 1
-                )
+                SearchProducts(searchQuery, resolve5, searchResultPage + 1)
               }
               className="loadmoreBtn pointer"
             >

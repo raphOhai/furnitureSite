@@ -30,7 +30,7 @@ const ProductCards = () => {
     dispatch(saveProducts(item.products));
     dispatch(saveProductPage(item.currentPage));
   };
-  
+
   const resolve2 = (item) => {
     dispatch(apendProducts(item.products));
     dispatch(saveProductPage(item.currentPage));
@@ -50,7 +50,7 @@ const ProductCards = () => {
     if (productsItems ? productsItems.length > 0 : "") {
       return;
     }
-    getCartItems(storeId, visitorId, saveCartCount);
+    getCartItems(saveCartCount);
     console.log(uuidv4());
     fetch(
       `https://fingertipps.store/user/collection1/644ecffe38fa62672d349ebd`,
@@ -88,13 +88,7 @@ const ProductCards = () => {
                       />
                       <div
                         onClick={() =>
-                          addToCart(
-                            quest._id,
-                            store,
-                            item,
-                            resolve3,
-                            errorCather
-                          ) & ShowAlert()
+                          addToCart(item, resolve3, errorCather) & ShowAlert()
                         }
                         className="flex center"
                       >
@@ -119,7 +113,7 @@ const ProductCards = () => {
       </div>
       <div style={{ marginTop: "4rem" }} className="flex center">
         <button
-          onClick={() => GetProducts(storeId, PrductPage + 1, resolve2)}
+          onClick={() => GetProducts( PrductPage + 1, resolve2)}
           className="loadmoreBtn pointer"
         >
           <p>loadmore</p>

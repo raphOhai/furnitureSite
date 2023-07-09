@@ -46,8 +46,6 @@ const Cartitems = () => {
     text: "pay now",
     onSuccess: (reference) =>
       savePaymentRecord(
-        visitorId,
-        storeId,
         reference.reference,
         total,
         address,
@@ -117,12 +115,8 @@ const Cartitems = () => {
                   </div>
                   <div
                     onClick={() =>
-                      deleteSingleCartItem(
-                        visitorId,
-                        storeId,
-                        item,
-                        UpdtateCartCount
-                      ) & deleteCartItem(item)
+                      deleteSingleCartItem(item, UpdtateCartCount) &
+                      deleteCartItem(item)
                     }
                     className="flex  center pointer"
                   >

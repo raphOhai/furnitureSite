@@ -8,9 +8,16 @@ import AlertMessage from "./shoppingPageComponents/alertMessage";
 import SearchResultCards from "./shoppingPageComponents/searchResultPage/searchResultCards";
 import SearchPage from "./shoppingPageComponents/searchResultPage";
 import Loader from "./loaderComponents";
+import { InitializeHandShake } from "fingertipps-handshakes";
+import { storeId, visitorId } from "./function/FingertippsApiCall";
 
 function App() {
-  
+  const quest = JSON.parse(localStorage.getItem("quest"));
+  InitializeHandShake(
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRlY2ZmZTM4ZmE2MjY3MmQzNDllYmQiLCJpYXQiOjE2ODg1ODkwNTJ9.vzbL2l2n2yQxPCfzLClGjEkruThNFfTmNH3yIXsP_aY",
+    storeId,
+    quest
+  );
   return (
     <>
       <Loader />

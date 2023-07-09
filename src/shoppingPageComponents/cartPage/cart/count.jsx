@@ -15,7 +15,7 @@ const Count = ({ count, item }) => {
     dispatch(decreaseItemCountInCart(item));
   };
   const resolve = (item) => {
-    console.log(resolve);
+    console.log(item);
   };
   const increaseCart = () => {
     dispatch(inscreaseItemCount(item));
@@ -23,7 +23,7 @@ const Count = ({ count, item }) => {
   return (
     <div className="flex gap">
       <div
-        onClick={() => decreaseItemCount(visitorId, storeId, item, resolve) & decreaseCart()}
+        onClick={() => decreaseItemCount( item, resolve) & decreaseCart()}
         className="decreaseBox pointer"
       >
         <div style={{ marginTop: "-.6rem" }} className="flex center">
@@ -40,7 +40,7 @@ const Count = ({ count, item }) => {
         </div>
       </div>
       <div
-        onClick={() => increaseItemCount(visitorId, storeId, item, resolve) & increaseCart()}
+        onClick={() => increaseItemCount(item, resolve) & increaseCart()}
         className="increaseBox pointer"
       >
         <div style={{ marginTop: "-.6rem" }} className="flex center">
