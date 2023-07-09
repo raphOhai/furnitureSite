@@ -273,7 +273,6 @@ export const Search = (searchQuery, ResolveAction) => {
     .catch((err) => {});
 };
 
-
 export const GetMoreSearch = (searchQuery, page, ResolveAction) => {
   fetch("https://fingertipps.store/search", {
     method: "post",
@@ -283,7 +282,7 @@ export const GetMoreSearch = (searchQuery, page, ResolveAction) => {
     body: JSON.stringify({
       search: searchQuery,
       id: store,
-      page: page
+      page: page,
     }),
   })
     .then((res) => res.json())
@@ -329,5 +328,5 @@ export const GetMoreProduct = (page, resolve) => {
     .catch((err) => {});
 };
 
-export const storeId = "644ecffe38fa62672d349ebd"
-export const visitorId = quest
+export const storeId = "644ecffe38fa62672d349ebd";
+export const visitorId = quest ? quest._id : "";
