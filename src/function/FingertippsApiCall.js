@@ -329,4 +329,4 @@ export const GetMoreProduct = (page, resolve) => {
 };
 
 export const storeId = "644ecffe38fa62672d349ebd";
-export const visitorId = quest ? quest._id : "";
+export const visitorId = quest

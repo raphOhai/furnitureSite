@@ -8,11 +8,7 @@ import { InitializeHandShake } from "fingertipps-handshakes";
 import { storeId, visitorId } from "../../function/FingertippsApiCall";
 
 const Product = () => {
-  InitializeHandShake(
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRlY2ZmZTM4ZmE2MjY3MmQzNDllYmQiLCJpYXQiOjE2ODg1ODkwNTJ9.vzbL2l2n2yQxPCfzLClGjEkruThNFfTmNH3yIXsP_aY",
-    storeId,
-    visitorId
-  );
+
   return (
     <>
       <div className="stack gap4 ">
