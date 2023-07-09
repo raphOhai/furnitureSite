@@ -6,8 +6,9 @@ import {
   saveSearchResults,
   saveSearchResultsPage,
 } from "../../../reducer/searchItems";
-import { Search } from "../../../function/FingertippsApiCall";
+import { Search, storeId } from "../../../function/FingertippsApiCall";
 import { useHistory } from "react-router-dom";
+import { SearchProducts } from "fingertipps-handshakes";
 
 const SeachBar = () => {
   const dispatch = useDispatch();
@@ -26,7 +27,6 @@ const SeachBar = () => {
           <div className="flex center">
             <SearchIcon />
           </div>
-
           <input
             onChange={(e) => dispatch(saveSearchQuery(e.target.value))}
             placeholder="search "
@@ -34,7 +34,9 @@ const SeachBar = () => {
         </div>
         <div className="flex end">
           <button
-            onClick={() => Search(searchQuery, ResolveAction)}
+            onClick={() =>
+              SearchProducts(storeId, searchQuery, ResolveAction, 1)
+            }
             className="Searchbtn pointer"
           >
             <p className="btnText1">Search</p>

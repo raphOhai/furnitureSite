@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { v4 as uuidv4 } from 'uuid';
-import { getCartItems } from "../../function/FingertippsApiCall";
+// import { getCartItems } from "../../function/FingertippsApiCall";
 import { useDispatch } from "react-redux";
 
 export const UserId = () => {
@@ -13,6 +13,6 @@ export const UserId = () => {
     //   dispatch(saveUser(quest));
       localStorage.setItem("quest", JSON.stringify(quest));
     }
-    getCartItems(dispatch);
+    // getCartItems(dispatch);
   }, []);
 };

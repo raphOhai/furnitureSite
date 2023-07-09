@@ -4,17 +4,24 @@ import { v4 as uuidv4 } from "uuid";
 import { UserId } from "../../hooks/userId";
 
 import { useDispatch, useSelector } from "react-redux";
-import { apendProducts, saveProductPage, saveProducts } from "../../../reducer/products";
+import {
+  apendProducts,
+  saveProductPage,
+  saveProducts,
+} from "../../../reducer/products";
 import {
   GetMoreProduct,
-  addToCart,
-  getCartItems,
+  storeId,
+  visitorId,
 } from "../../../function/FingertippsApiCall";
 import { ShowAlert } from "../../../function/alertFunctions";
 import Animate from "../../../function/Animation";
 import { updateCartCount } from "../../../reducer/cartItems";
+import { GetProducts, addToCart, getCartItems } from "fingertipps-handshakes";
 
 const ProductCards = () => {
+  const store = "644ecffe38fa62672d349ebd";
+  const quest = JSON.parse(localStorage.getItem("quest"));
   const { productsItems, PrductPage } = useSelector((state) => state.products);
   const dispatch = useDispatch();
   Animate(productsItems);
@@ -28,11 +35,23 @@ const ProductCards = () => {
     dispatch(apendProducts(item.products));
     dispatch(saveProductPage(item.currentPage));
   };
+
+  const resolve3 = (item) => {
+    dispatch(updateCartCount(item));
+  };
+
+  const saveCartCount = (item) => {
+    dispatch(updateCartCount(item.length));
+  };
+
+  const errorCather = (err) => {
+    console.log(err);
+  };
   useEffect(() => {
     if (productsItems ? productsItems.length > 0 : "") {
       return;
     }
-    getCartItems(dispatch);
+    getCartItems(storeId, visitorId, saveCartCount);
     console.log(uuidv4());
     fetch(
       `https://fingertipps.store/user/collection1/644ecffe38fa62672d349ebd`,
@@ -69,7 +88,15 @@ const ProductCards = () => {
                         alt=""
                       />
                       <div
-                        onClick={() => addToCart(item, dispatch) & ShowAlert()}
+                        onClick={() =>
+                          addToCart(
+                            quest._id,
+                            store,
+                            item,
+                            resolve3,
+                            errorCather
+                          ) & ShowAlert()
+                        }
                         className="flex center"
                       >
                         <div className="flex gap pointer">
@@ -91,9 +118,9 @@ const ProductCards = () => {
             ))
           : ""}
       </div>
-      <div style={{marginTop:"4rem"}} className="flex center">
+      <div style={{ marginTop: "4rem" }} className="flex center">
         <button
-          onClick={() => GetMoreProduct(PrductPage + 1, resolve2)}
+          onClick={() => GetProducts(storeId, PrductPage + 1, resolve2)}
           className="loadmoreBtn pointer"
         >
           <p>loadmore</p>

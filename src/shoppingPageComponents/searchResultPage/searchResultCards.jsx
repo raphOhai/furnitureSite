@@ -1,6 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { GetMoreSearch, addToCart } from "../../function/FingertippsApiCall";
+import {
+  GetMoreSearch,
+  storeId,
+  visitorId,
+} from "../../function/FingertippsApiCall";
 import { ShowAlert } from "../../function/alertFunctions";
 import Cart2 from "../../assets/cart2";
 import Animate from "../../function/Animation";
@@ -10,6 +14,8 @@ import {
   saveSearchResults,
   saveSearchResultsPage,
 } from "../../reducer/searchItems";
+import { SearchProducts, addToCart } from "fingertipps-handshakes";
+import { updateCartCount } from "../../reducer/cartItems";
 
 const SearchResultCards = () => {
   const { searchResults, searchQuery, searchResultPage } = useSelector(
@@ -20,6 +26,12 @@ const SearchResultCards = () => {
   const resolve5 = (items) => {
     dispatch(apendSearchResults(items.products));
     dispatch(saveSearchResultsPage(items.currentPage));
+  };
+  const resolve3 = (item) => {
+    dispatch(updateCartCount(item));
+  };
+  const errorCather = (err) => {
+    console.log(err);
   };
   return (
     <>
@@ -45,7 +57,15 @@ const SearchResultCards = () => {
                       alt=""
                     />
                     <div
-                      onClick={() => addToCart(item, dispatch) & ShowAlert()}
+                      onClick={() =>
+                        addToCart(
+                          visitorId,
+                          storeId,
+                          item,
+                          resolve3,
+                          errorCather
+                        ) & ShowAlert()
+                      }
                       className="flex center"
                     >
                       <div className="flex gap pointer">
@@ -94,7 +114,12 @@ const SearchResultCards = () => {
           <div style={{ marginTop: "4rem" }} className="flex center">
             <button
               onClick={() =>
-                GetMoreSearch(searchQuery, searchResultPage + 1, resolve5)
+                SearchProducts(
+                  storeId,
+                  searchQuery,
+                  resolve5,
+                  searchResultPage + 1
+                )
               }
               className="loadmoreBtn pointer"
             >

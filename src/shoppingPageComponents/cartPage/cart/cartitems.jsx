@@ -3,23 +3,30 @@ import Count from "./count";
 import Close from "../../../assets/Close";
 
 import { useDispatch, useSelector } from "react-redux";
-import { saveCartItems } from "../../../reducer/cartItems";
+import {
+  deleteItemIncart,
+  saveCartItems,
+  updateCartCount,
+} from "../../../reducer/cartItems";
 
 import { PaystackButton } from "react-paystack";
 import Send from "../../../assets/Send";
 import { saveAddress, saveEmail, saveName } from "../../../reducer/userDetails";
+import { storeId, visitorId } from "../../../function/FingertippsApiCall";
 import {
   deleteSingleCartItem,
   getCartItems,
-  submit,
-} from "../../../function/FingertippsApiCall";
-
+  savePaymentRecord,
+} from "fingertipps-handshakes";
 const Cartitems = () => {
   const dispatch = useDispatch();
   const { itemsInCart, total } = useSelector((state) => state.cartItems);
   const { name, email, address } = useSelector((state) => state.userDetails);
+  const resolveFunction = (result) => {
+    dispatch(saveCartItems(result));
+  };
   useEffect(() => {
-    getCartItems(dispatch);
+    getCartItems(storeId, visitorId, resolveFunction);
   }, []);
 
   const config = {
@@ -38,10 +45,25 @@ const Cartitems = () => {
     ...config,
     text: "pay now",
     onSuccess: (reference) =>
-      submit(reference, total, address, name, email, itemsInCart),
+      savePaymentRecord(
+        visitorId,
+        storeId,
+        reference.reference,
+        total,
+        address,
+        name,
+        email,
+        12345678,
+        itemsInCart
+      ),
     onClose: handlePaystackCloseAction,
   };
-
+  const deleteCartItem = (item) => {
+    dispatch(deleteItemIncart(item));
+  };
+  const UpdtateCartCount = (number) => {
+    dispatch(updateCartCount(number));
+  };
   return (
     <div className="grid5 gap2 padding  maxWidth">
       <div className="">
@@ -94,7 +116,14 @@ const Cartitems = () => {
                     </div>
                   </div>
                   <div
-                    onClick={() => deleteSingleCartItem(item, dispatch)}
+                    onClick={() =>
+                      deleteSingleCartItem(
+                        visitorId,
+                        storeId,
+                        item,
+                        UpdtateCartCount
+                      ) & deleteCartItem(item)
+                    }
                     className="flex  center pointer"
                   >
                     <Close />

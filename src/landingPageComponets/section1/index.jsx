@@ -34,7 +34,15 @@ const Section1 = () => {
                   <p className="darkText">₦35,000</p>
                 </div>
               </div>
-              <img className="imageTrick1 responsive" src="/p1.png" alt="" />
+              <div className="flex center">
+                <img
+                  id="im"
+                  className="imageTrick1 responsive"
+                  src="/p1.png"
+                  alt=""
+                />
+              </div>
+
               <div className="flex center">
                 <div className="trickBtn">
                   <div className="">

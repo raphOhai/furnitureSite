@@ -4,11 +4,18 @@ import { useEffect } from "react";
 
 import Cartitems from "./cartitems";
 import Footer from "../../../landingPageComponets/footer";
-import { getCartItems } from "../../../function/FingertippsApiCall";
+import { getCartItems } from "fingertipps-handshakes";
+import { storeId, visitorId } from "../../../function/FingertippsApiCall";
+import { useDispatch } from "react-redux";
+import { saveCartItems } from "../../../reducer/cartItems";
 
 const Cart = () => {
+  const dispatch = useDispatch();
+  const resolveFunction = (result) => {
+    dispatch(saveCartItems(result));
+  };
   useEffect(() => {
-    getCartItems();
+    getCartItems(storeId, visitorId, resolveFunction);
   }, []);
 
   return (

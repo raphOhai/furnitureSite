@@ -73,7 +73,7 @@ const Section2 = () => {
           </div>
         </div>
         <div>
-          <div className="flex end">
+          <div className="flex">
             <div className="relative">
               <div className="imageTrick1Dot slideDown group">
                 <YellowDotted />
