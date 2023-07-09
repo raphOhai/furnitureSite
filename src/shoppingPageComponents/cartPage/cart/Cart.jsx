@@ -22,7 +22,6 @@ const Cart = () => {
       <div style={{ marginTop: "8rem" }}>
         <Cartitems />
       </div>
-
       <Footer />
     </div>
   );
