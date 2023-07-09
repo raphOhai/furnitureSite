@@ -30,7 +30,7 @@ const ProductCards = () => {
     dispatch(saveProducts(item.products));
     dispatch(saveProductPage(item.currentPage));
   };
-
+  
   const resolve2 = (item) => {
     dispatch(apendProducts(item.products));
     dispatch(saveProductPage(item.currentPage));
@@ -43,7 +43,6 @@ const ProductCards = () => {
   const saveCartCount = (item) => {
     dispatch(updateCartCount(item.length));
   };
-
   const errorCather = (err) => {
     console.log(err);
   };

@@ -20,7 +20,7 @@
   .infoBoxContent2 {
     display: none;
   }
-  .hideFold{
+  .hideFold {
     display: none;
   }
 }
@@ -141,7 +141,7 @@
   }
   .mainGrid {
     display: grid;
-    grid-template-columns: 1fr  ;
+    grid-template-columns: 1fr;
     column-gap: 2rem;
   }
   .padding {
@@ -195,7 +195,7 @@
   }
   .grid3 {
     display: grid;
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
     gap: 10rem;
   }
   .grid4 {
@@ -265,21 +265,21 @@
     background-size: initial;
     background-position: center top;
     width: 100%;
-    height: 60vh;
+    height: 70vh;
     z-index: -3;
-    background-position-y: -9rem;
+    background-position-y: -40rem;
     /* opacity: 0.5; */
-    background-position-x: -16rem;
+    background-position-x: -20rem;
   }
   .infoBoxContent1 {
     position: absolute;
-    top: -3rem;
+    top: -17rem;
     left: -10rem;
   }
   .infoBoxContent2 {
     position: absolute;
-    top: 17rem;
-    left: -25rem;
+    top: 2rem;
+    left: 5rem;
   }
   .grid2 {
     display: grid;
@@ -361,7 +361,7 @@
   }
   .mainGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns:  1fr 1fr;
     column-gap: 2rem;
   }
   .padding {
@@ -371,20 +371,25 @@
   .heroDiv {
     background-image: url("https://res.cloudinary.com/dmiu0s6fe/image/upload/v1688828764/heroImg6_jdufrn.jpg");
     background-repeat: no-repeat;
-    width: 100vw;
-    height: 20vh;
+    overflow: hidden;
+    background-size: initial;
+    background-position: center top;
+    width: 100%;
+    height: 60vh;
+    z-index: -3;
+    /* opacity: 0.5; */
+    background-position-x: -1rem;
     background-position-y: -30rem;
-    background-size: 100%;
   }
   .infoBoxContent1 {
     position: absolute;
-    top: -9rem;
+    top: -18rem;
     left: -4rem;
   }
   .infoBoxContent2 {
     position: absolute;
-    top: 5rem;
-    left: -25rem;
+    top: -3rem;
+    left: 9rem;
   }
   .grid2 {
     display: grid;
@@ -476,22 +481,22 @@
     background-size: initial;
     background-position: center top;
     width: 100%;
-    height: 60vh;
+    height: 1000px;
     z-index: -3;
     /* opacity: 0.5; */
-    background-position-x: -1rem;
-    background-position-y: -17rem;
+    background-position-x: -15rem;
+    background-position-y: -30rem;
     /* filter: blur(2px);
     -webkit-filter: blur(2px); */
   }
   .infoBoxContent1 {
     position: absolute;
-    top: -3rem;
+    top: -14rem;
     left: -4rem;
   }
   .infoBoxContent2 {
     position: absolute;
-    top: 15rem;
+    top: 5rem;
     left: -25rem;
   }
   .grid2 {

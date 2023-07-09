@@ -37,8 +37,8 @@ const Section1 = () => {
               <div className="flex center">
                 <img
                   id="im"
-                  className="imageTrick1 responsive"
-                  src="/p1.png"
+                  className="imageTrick1 responsie"
+                  src="/product-1.png"
                   alt=""
                 />
               </div>
