@@ -14,7 +14,9 @@ const Cart = () => {
   const resolveFunction = (result) => {
     dispatch(saveCartItems(result));
   };
- 
+  useEffect(() => {
+    getCartItems(visitorId, resolveFunction);
+  }, []);
 
   return (
     <div className="stack gap4">
@@ -22,6 +24,7 @@ const Cart = () => {
       <div style={{ marginTop: "8rem" }}>
         <Cartitems />
       </div>
+
       <Footer />
     </div>
   );
