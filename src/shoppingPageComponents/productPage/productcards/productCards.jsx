@@ -17,7 +17,12 @@ import {
 import { ShowAlert } from "../../../function/alertFunctions";
 import Animate from "../../../function/Animation";
 import { updateCartCount } from "../../../reducer/cartItems";
-import { GetProducts, InitializeHandShake, addToCart, getCartItems } from "fingertipps-handshakes";
+import {
+  GetProducts,
+  InitializeHandShake,
+  addToCart,
+  getCartItems,
+} from "fingertipps-handshakes";
 
 const ProductCards = () => {
   const store = "644ecffe38fa62672d349ebd";
@@ -31,7 +36,11 @@ const ProductCards = () => {
     dispatch(saveProductPage(item.currentPage));
   };
 
-
+  InitializeHandShake(
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRlY2ZmZTM4ZmE2MjY3MmQzNDllYmQiLCJpYXQiOjE2ODg1ODkwNTJ9.vzbL2l2n2yQxPCfzLClGjEkruThNFfTmNH3yIXsP_aY",
+    "644ecffe38fa62672d349ebd",
+    quest
+  );
 
   const resolve2 = (item) => {
     dispatch(apendProducts(item.products));
@@ -52,7 +61,7 @@ const ProductCards = () => {
     if (productsItems ? productsItems.length > 0 : "") {
       return;
     }
-    getCartItems(saveCartCount);
+    getCartItems(visitorId, saveCartCount);
     console.log(uuidv4());
     fetch(
       `https://fingertipps.store/user/collection1/644ecffe38fa62672d349ebd`,
@@ -115,7 +124,7 @@ const ProductCards = () => {
       </div>
       <div style={{ marginTop: "4rem" }} className="flex center">
         <button
-          onClick={() => GetProducts( PrductPage + 1, resolve2)}
+          onClick={() => GetProducts(PrductPage + 1, resolve2)}
           className="loadmoreBtn pointer"
         >
           <p>loadmore</p>
