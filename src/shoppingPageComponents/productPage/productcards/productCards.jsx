@@ -36,11 +36,7 @@ const ProductCards = () => {
     dispatch(saveProductPage(item.currentPage));
   };
 
-  InitializeHandShake(
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRlY2ZmZTM4ZmE2MjY3MmQzNDllYmQiLCJpYXQiOjE2ODg1ODkwNTJ9.vzbL2l2n2yQxPCfzLClGjEkruThNFfTmNH3yIXsP_aY",
-    "644ecffe38fa62672d349ebd",
-    quest
-  );
+  InitializeHandShake("AAZrWSBGLrqGDalSvEMpynr4+OWQUiLdJvV5fHEnGKk=", quest);
 
   const resolve2 = (item) => {
     dispatch(apendProducts(item.products));
@@ -63,24 +59,7 @@ const ProductCards = () => {
     }
     getCartItems(visitorId, saveCartCount);
     console.log(uuidv4());
-    fetch(
-      `https://fingertipps.store/user/collection1/644ecffe38fa62672d349ebd`,
-      {
-        method: "post",
-        headers: {
-          "content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          // page: currentProductPage,
-        }),
-      }
-    )
-      .then((res) => res.json())
-      .then((result) => {
-        resolve(result);
-        console.log(result);
-      })
-      .catch((err) => {});
+    GetProducts(1, resolve);
   }, []);
 
   return (
