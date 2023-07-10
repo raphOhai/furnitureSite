@@ -53,7 +53,6 @@ const Header = () => {
                   <CartIcon />
                 </div>
               </div>
-
               {/* <UserIcon /> */}
             </div>
           </div>

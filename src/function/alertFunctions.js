@@ -11,9 +11,9 @@ export const AnimateOnScroll = (id) => {
   const ShowPriceLables = () => {
     const InfoBox = document.getElementById(id);
     if (window.scrollY >= 20) {
-      InfoBox.classList.add("show");
+      InfoBox?.classList.add("show");
     } else {
-      InfoBox.classList.remove("show");
+      InfoBox?.classList.remove("show");
     }
   };
   window.addEventListener("scroll", ShowPriceLables);
@@ -22,7 +22,7 @@ export const AnimateOnScroll = (id) => {
 export const drawSvg = () => {
   const path = document.getElementById("path1");
 
-  path.classList.add("drawPath1");
+  path?.classList.add("drawPath1");
 
   const text = document.getElementById("logoText");
   const showText = () => {
@@ -37,15 +37,15 @@ export const drawSvg = () => {
 const unDrawSvg = () => {
   const path = document.getElementById("path1");
   const loader = document.getElementById("loader");
-  path.classList.replace("drawPath1", "path1");
+  path?.classList.replace("drawPath1", "path1");
 
   const text = document.getElementById("logoText");
   const HideText = () => {
-    text.classList.remove("show");
+    text?.classList.remove("show");
   };
 
   const closeLoader = () => {
-    loader.classList.add("remove");
+    loader?.classList.add("remove");
   };
 
   setTimeout(HideText, 1000);
