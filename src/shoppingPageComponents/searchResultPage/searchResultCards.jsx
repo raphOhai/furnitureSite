@@ -35,54 +35,59 @@ const SearchResultCards = () => {
   };
   return (
     <>
-      {searchResults.products.length < 1 ? (
-        ""
+      {searchResults ? (
+        searchResults.length > 1 ? (
+          <div className="flex center">
+            <p className="regularText textCenter">
+              showing result for "{searchQuery}"
+            </p>
+          </div>
+        ) : (
+          ""
+        )
       ) : (
-        <div className="flex center">
-          <p className="regularText textCenter">
-            showing result for "{searchQuery}"
-          </p>
-        </div>
+        ""
       )}
       <div className="productGrid padding">
-        {searchResults.products ? (
-          searchResults.products.map((item) => (
-            <div key={item._id} className="slideDown">
-              <div className="stack gap">
-                <div className="card">
-                  <div className="stack gap">
-                    <img
-                      className="responsive1"
-                      src={item.photos[0] ? item.photos[0].picture : ""}
-                      alt=""
-                    />
-                    <div
-                      onClick={() =>
-                        addToCart(item, resolve3, errorCather) & ShowAlert()
-                      }
-                      className="flex center"
-                    >
-                      <div className="flex gap pointer">
-                        <Cart2 />
-                        <p className="grayText  capitalize addToCart">
-                          add to cart
-                        </p>
+        {searchResults.length < 0
+          ? ""
+          : searchResults.map((item) => (
+              <div key={item._id} className="slideDown">
+                <div className="stack gap">
+                  <div className="card">
+                    <div className="stack gap">
+                      <img
+                        className="responsive1"
+                        src={item.photos[0] ? item.photos[0].picture : ""}
+                        alt=""
+                      />
+                      <div
+                        onClick={() =>
+                          addToCart(item, resolve3, errorCather) & ShowAlert()
+                        }
+                        className="flex center"
+                      >
+                        <div className="flex gap pointer">
+                          <Cart2 />
+                          <p className="grayText  capitalize addToCart">
+                            add to cart
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <p className="grayText capitalize">
+                    {" "}
+                    {item.name.slice(0, 14)}
+                  </p>
+                  <p className="smallHeading">₦{item.price.toLocaleString()}</p>
                 </div>
-                <p className="grayText capitalize"> {item.name.slice(0, 14)}</p>
-                <p className="smallHeading">₦{item.price.toLocaleString()}</p>
               </div>
-            </div>
-          ))
-        ) : (
-          <></>
-        )}
+            ))}
       </div>
 
       {searchResults ? (
-        searchResults.products.length < 1 ? (
+        searchResults.length < 1 ? (
           <div className="flex center">
             <div className="stack gap">
               <div className="flex center">
