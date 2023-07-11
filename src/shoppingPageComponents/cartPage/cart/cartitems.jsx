@@ -64,14 +64,7 @@ const Cartitems = () => {
     dispatch(updateCartCount(number));
   };
   const quest = JSON.parse(localStorage.getItem("quest"));
-  useEffect(() => {
-    if (quest) {
-      InitializeHandShake(
-        "AAZrWSBGLrqGDalSvEMpynr4+OWQUiLdJvV5fHEnGKk=",
-        quest
-      );
-    }
-  }, [quest]);
+  InitializeHandShake("AAZrWSBGLrqGDalSvEMpynr4+OWQUiLdJvV5fHEnGKk=", quest);
   return (
     <div className="grid5 gap2 padding  maxWidth">
       <div className="">
